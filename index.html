@@ -5,19 +5,24 @@
 	<link rel="stylesheet" type="text/css" href="/styles/main.sass.css">
 </head>
 <body>
-<nav>
-	<a  href="#board">HIGH SCORES</a>
-	<a  href="#settings">SETTINGS</a>
-	<a  href="#play">PLAY</a>
-</nav>
-	
+<section id="loadScreen">
+	<div> <img src="http://www.catharsiscollective.com/wp-content/plugins/advanced-ajax-page-loader/loaders/Stick%20Men%20Fighting.gif" alt="fighting" />
+	</div>
+</section>
 
 
-<div id="load"></div>
+<section id="menuScreen">	
+	<a  href="#board"><button>HIGH SCORES</button></a>
+	<a  href="#settings"><button>SETTINGS</button></a>
+	<a  href="#play"><button>PLAY</button></a>
+</section>
 
-<section id="boardScreen"> <h1>SCORES</h1></section>
-<section id="settingsScreen"><h1>SETTINGS</h1></section>
-<section id="playScreen"><h1>PLAY</h1></section>
+<section id="boardScreen">
+ <h1>SCORES</h1></section>
+<section id="settingsScreen">
+<h1>SETTINGS</h1></section>
+<section id="playScreen">
+<h1>PLAY</h1></section>
 <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/node_modules/backbone/node_modules/underscore/underscore-min.js"></script>
 	<script type="text/javascript" src="/node_modules/backbone/backbone-min.js"></script>
