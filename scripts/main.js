@@ -1,4 +1,5 @@
 'use strict';
+$(document).ready(function() {
 var Router = Backbone.Router.extend({
 	routes: {
 		' ': 'goLoad',
@@ -10,9 +11,7 @@ var Router = Backbone.Router.extend({
 	},
 	goLoad: function(){
 		$('section').hide();
-	setTimeout(function() {
-		$('#loadScreen').hide();
-	}, 4000);
+		$('#loadScreen').show();
 	},
 	goMenu: function(){
 		$('#loadScreen').hide();
@@ -34,7 +33,12 @@ var Router = Backbone.Router.extend({
 		$('#playScreen').show();
 	}
 });	
+$('section').hide();
+$('#loadScreen').show();
+setTimeout(function() {
+		$('#loadScreen').hide();
+	}, 4000);
 	
 	var game = new Router();
 	Backbone.history.start();
-
+})
