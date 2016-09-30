@@ -2,23 +2,10 @@
 $(document).ready(function() {
 var Router = Backbone.Router.extend({
 	routes: {
-		' ': 'goLoad',
-		'load': 'goLoad',
-		'menu':'goMenu',
+
 		'board': 'goBoard',
 		'settings': 'goSettings',
 		'play': 'goPlay'
-	},
-	goLoad: function(){
-		$('section').hide();
-		$('#loadScreen').show();
-	},
-	goMenu: function(){
-		$('#loadScreen').hide();
-		$('#boardScreen').hide();
-		$('#settingsScreen').hide();
-		$('#playScreen').hide();
-		$('#menuScreen').show();
 	},
 	goBoard: function(){
 		$('section').hide();
@@ -37,6 +24,7 @@ $('section').hide();
 $('#loadScreen').show();
 setTimeout(function() {
 		$('#loadScreen').hide();
+		$('#menuScreen').show();
 	}, 4000);
 	
 	var game = new Router();
